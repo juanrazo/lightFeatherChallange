@@ -1,13 +1,8 @@
 package io.lightfeather.springtemplate.dto;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.NotNull;
 
 
-@ApiModel(description = "Parameters for creating an employee")
 public class EmployeeRequest {
 
     @NotNull
@@ -24,47 +19,23 @@ public class EmployeeRequest {
     private Boolean supervisor;
 
 
-    @ApiModelProperty(
-            value = "First name for employee",
-            example = "John",
-            required = true
-    )
     public String getFirstName() {
         return firstName;
     }
 
-    @ApiModelProperty(
-            value = "Last name for employee",
-            example = "Doe",
-            required = true
-    )
     public String getLastName() {
         return lastName;
     }
 
-    @ApiModelProperty(
-            value = "Email for employee",
-            example = "JohnDoe@email.com",
-            required = false
-    )
     public String getEmail() {
         return email;
     }
 
-    @ApiModelProperty(
-            value = "Phone number for employee",
-            example = "555-867-5309",
-            required = false
-    )
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    @ApiModelProperty(
-            value = "Boolean for Supervisor",
-            example = "true or false",
-            required = true
-    )
     public Boolean getSupervisor() {
         return supervisor;
     }
